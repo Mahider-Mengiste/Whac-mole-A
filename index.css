@@ -4,21 +4,21 @@ body{
  
 }
 .grid{
-border: 4px solid #3b3a30;
+border: 5px solid #3b3a30;
 border-radius: 8px;
 width: 600px;
 height: 600px;
 position: absolute;
-top: 25%;
-bottom:25%;
-left: 25%;
-right: 25%;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+
+
 }
 .cell{
-  border: 2px solid #edda0c;
-  height: 100px;
-
-
-
-  
+border: 3px solid #3b3a30;
 }
