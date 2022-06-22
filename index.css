@@ -16,10 +16,10 @@ margin-top: 120px;
 }
 
 .grid{
-border: 5px solid #3b3a30;
+
 border-radius: 8px;
 width: 1400px;
-height: 600px;
+height: 700px;
 position: absolute;
 top:0;
 bottom: 0;
@@ -33,6 +33,7 @@ grid-template-columns: 1fr 1fr 1fr;
 .cell{
 border: 4px solid #3b3a30;
 background-color: #eaece5;
+margin: 2px;
 }
 .start{
   position:absolute;
