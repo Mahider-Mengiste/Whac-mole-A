@@ -1,0 +1,24 @@
+body{
+ height: 100%;
+ background-color: #ddeedd;
+ 
+}
+.grid{
+border: 4px solid #3b3a30;
+border-radius: 8px;
+width: 600px;
+height: 600px;
+position: absolute;
+top: 25%;
+bottom:25%;
+left: 25%;
+right: 25%;
+}
+.cell{
+  border: 2px solid #edda0c;
+  height: 100px;
+
+
+
+  
+}
