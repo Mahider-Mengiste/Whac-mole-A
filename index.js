@@ -1,44 +1,70 @@
-// grab the div element with the class .grid
-const grid  = document.querySelector(".grid")
+      const cells = document.querySelectorAll('.cell')
+      const mole = document.querySelector('.mole')
+      const score = document.querySelector('.score')
+      const time = document.querySelector('.time')
+      const gameAnnouncer = document.querySelector('.game-announcer')
+      const startButton = document.querySelector('.startBtn')
 
-// inside the grid create 9 more divs to create a 3x3 grid
-      // createElement and append it to the parent div
-      // loop 9 times to have the div's
- for (let i = 0; i < 9; i++) {
-let cell = document.createElement('div')
-// append cell into the grid
-grid.appendChild(cell)
-// add a class to the newly created divs
-cell.classList.add('cell')  
-// add an id 
-cell.setAttribute("id", i);
+      let setMoleinterval;
+      let randomCell;
+      let result = 0;
+      let randomCellId;
+      let setTimeInterval;
+      let timer = 10
 
- }  
+function game(){
 
- const displayMole = ()=> {
-      //  grab .cell 
-      // add a style to that element
-      const cells = document.querySelector('.cell')
-      // create a forEach loop to loop through each cell
-      console.log(cells)
-      cells.style.backgroundColor = '#a2836e';
-
-
- }
-displayMole()
-
-const createStartButton = ()=>{
-      // create an element called start
-      // add a class .class
-
-      const start = document.createElement('button')
-      start.classList.add("start")
-      start.innerText = "Start"
-      console.log(start)
-      document.body.appendChild(start)
+      function removeMole() {
+            cells.forEach(cell => {
+                  cell.classList.remove('mole')
+            })
+      }
   
+      function selectRandomCell() {
+            removeMole()
+            randomCell= cells[Math.floor(Math.random() * cells.length)]
+            randomCell.classList.add('mole')
+            randomCellId = randomCell.id
+      }
+
+      selectRandomCell()
+
+      function moveMole(){
+            setMoleinterval = setInterval(selectRandomCell, 2000)   
+      }
+      moveMole()  
+
+      function clickMole(e) {
+
+            for (let i = 0; i < 9 ; i++) {
+                 cells[i].addEventListener('click', (e)=> {
+                        if (e.target.id === randomCellId) {
+                              result++
+                              score.textContent = result 
+                        }
+                 })
+            }
+      }  
+
+      clickMole()
+
+      function timeCounter() {
+            timer--
+            time.textContent = timer
+                  if (timer === 0 && result < 5) {
+                        clearInterval(setTimeInterval)
+                        clearInterval(setMoleinterval)
+                        gameAnnouncer.textContent = `Game over, your final score is ${result}`
+                  }
+                  if (timer === 0 && result >= 5) {
+                        clearInterval(setTimeInterval)
+                        clearInterval(setMoleinterval)
+                        gameAnnouncer.textContent = `You won 🎉, your final score is ${result}!`
+                  }
+
+      }
+      setTimeInterval = setInterval(timeCounter,1000)
+
 }
 
-createStartButton()
-
-
+startButton.addEventListener('click', game)
