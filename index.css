@@ -1,126 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat:wght@600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap');
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  background-color: #d9ecd0;
-   font-family: 'Libre Baskerville', serif;
-   overflow: hidden;
-  
-}
+  * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+  }
 
-.container {
-  display: grid;
-  height: 100vh;
-  /* border: 3px solid rgb(206, 179, 110); */
-  justify-content: center;
- 
-}
+  body {
+      background-color: #d9ecd0;
+      font-family: 'Libre Baskerville', serif;
+      overflow: hidden;
+  }
 
-.show-result {
-  height: 20vh;
-  margin-top: 10px;
-  padding: 25px;
+  .container {
+      display: grid;
+      height: 100vh;
+      justify-content: center;
+  }
 
-}
+  .show-result {
+      height: 20vh;
+      margin-top: 10px;
+      padding: 25px;
+  }
 
-.show-result h1 {
-  text-align: center;
-  color: rgb(249, 67, 67)
-} 
+  .show-result h1 {
+      text-align: center;
+      color: rgb(249, 67, 67);
+  } 
 
-.result-board{
-  display: flex;
-  justify-content: space-around;
-  height: 60px;
-  margin-top: 5px;
-  color: #3b3a30;
-}
+  .result-board{
+      display: flex;
+      justify-content: space-around;
+      height: 60px;
+      margin-top: 5px;
+      color: #3b3a30;
+  }
 
-.result-board .score-message {
-text-align: center;
-height: 30px;
-font-size: 20px;
-margin: auto;
-}
+  .result-board .score-message {
+      text-align: center;
+      height: 30px;
+      font-size: 20px;
+      margin: auto;
+  }
 
-.result-board .time-message {
-height: 30px;
-text-align: center;
-font-size: 20px;
-margin: auto;
-}
+  .result-board .time-message {
+      height: 30px;
+      text-align: center;
+      font-size: 20px;
+      margin: auto;
+  }
 
-.grid{
-  
+  .grid{
+      height: 60vh;
+      width: 800px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+  }
 
-    height: 60vh;
-    width: 800px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-     gap: 4px;
+  .cell {
+      border: 3px solid #3b3a30;
+      border-radius: 8px;
+      background-color: #eaece5;
+  }
 
-   
+  .mole {
+      background-color: rgb(249, 67, 67);
+  }
 
-}
+  .game-result {
+      height: 18vh;
+      margin-top: 5px;
+      color: #3b3a30;
+  }
 
- .cell {
-  border: 3px solid #3b3a30;
-  border-radius: 8px;
-  background-color: #eaece5;
- 
-}
+  .game-announcer {
+      text-align: center;
+      font-size: 20px;
+      display: block;
+      height: 6vh;
+      padding: 5px;
+      margin: auto;
+  }
 
-.mole {
-  background-color: rgb(249, 67, 67);
-
-}
-
-
-.game-result {
-  
-    height: 18vh;
-    margin-top: 5px;
-    color: #3b3a30;
-  
-}
-.game-announcer {
-
-  text-align: center;
-  font-size: 20px;
-  display: block;
-  height: 6vh;
-  padding: 5px;
-  margin: auto;
-
-  
-
-}
-
-.startBtn {
-   
-    font-family: 'Libre Baskerville', serif;
-   text-align: center;
-    display: grid;
-    margin: auto;
-    width: 100px;
-    height:30px;
-    border-radius: 4px;
-   background-color: #eaece5;
-    font-size: 20px;
-    border:2px solid #3b3a30;
+  .startBtn {
+      font-family: 'Libre Baskerville', serif;
+      text-align: center;
+      display: grid;
+      margin: auto;
+      width: 100px;
+      height:30px;
+      border-radius: 4px;
+      background-color: #eaece5;
+      font-size: 20px;
+      border:2px solid #3b3a30;
       box-shadow: 0 0 3px gray;
-  text-decoration:none;
- font-family: Montserrat;
- cursor: grab; 
- color: #3b3a30;
-    
-   
-}
+      text-decoration:none;
+      font-family: Montserrat;
+      cursor: grab; 
+      color: #3b3a30;
+  }
 
-.startBtn:hover {
-background:#a2836e;
-}
+  .startBtn:hover {
+      background:#a2836e;
+  }

@@ -54,7 +54,7 @@ function game(){
                   if (timer === 0 && result < 5) {
                         clearInterval(setTimeInterval)
                         clearInterval(setMoleinterval)
-                        gameAnnouncer.textContent = `Game over, your final score is ${result}`
+                        gameAnnouncer.textContent = `Game over 😞, your final score is ${result}`
                   }
                   if (timer === 0 && result >= 5) {
                         clearInterval(setTimeInterval)
